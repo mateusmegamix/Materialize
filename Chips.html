@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title> Materialize </title>
+		<!--Import Google Icon Font-->
+      	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- Materialize CSS -->
+		<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+		<link rel="stylesheet" href="css/custom.css">
+	</head>
+	<body>
+
+		<div class="chips">
+		</div>
+		<button>Mostrar Dados</button>
+
+		<a class="btn-floating red pulse"><i class="material-icons">menu</i></a>
+
+		<!-- Materialize JQUERY -->
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<!-- Materialize JS -->
+		<script type="text/javascript" src="js/materialize.js"></script>
+		<script>
+
+		$(document).ready(function(){
+
+		// chips
+		$('.chips').material_chip({
+
+			data:[
+			{tag: 'HTML', image: '', id: 1},
+			{tag: 'CSS'},
+			{tag: 'PHP'}
+			],
+
+			placeholder: 'Digite uma tag',
+			secondaryPlaceholder: '+ Tag',
+
+			autocompleteData:{
+				'javascript': null,
+				'jquery': null,
+				'CSS': null
+			},
+			// limite do autocomplete
+			autocompleteLimit: 2
+
+		});
+		//exibindo dados
+		$('button').click(function(){
+			var dados = $('.chips').materiL_chip('data');
+			console.log(dados);
+		})
+
+		});
+
+		</script>
+<!--
+		<script>
+		$('.chips').material_chip();
+
+		$('.chips').on('chip.add', function(e, chip){
+			alert("tag adicionada")
+    	// you have the added chip here
+  		});
+
+  		$('.chips').on('chip.delete', function(e, chip){
+  			alert("tag removida")
+    	// you have the deleted chip here
+  		});
+
+  		$('.chips').on('chip.select', function(e, chip){
+  			alert("tag selecionada")
+    	// you have the selected chip here
+  		});
+		</script>
+-->
+	</body>
+</html>

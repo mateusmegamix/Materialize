@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title> Materialize </title>
+		<!--Import Google Icon Font-->
+      	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- Materialize CSS -->
+		<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+		<link rel="stylesheet" href="css/custom.css">
+	</head>
+	<body>
+
+	<div class="carousel">
+	    <a class="carousel-item" href="#one!"><img src="img/IMG_1300.jpg"></a>
+	    <a class="carousel-item" href="#two!"><img src="img/IMG_8676.jpg"></a>
+	    <a class="carousel-item" href="#three!"><img src="img/IMG_1581.jpg"></a>
+	    <a class="carousel-item" href="#four!"><img src="img/IMG_8493.jpg"></a>
+	    <a class="carousel-item" href="#five!"><img src="img/IMG_1563.jpg"></a>
+  	</div>
+
+  	<button class="next">Próximo</button>
+
+		<!-- Materialize JQUERY -->
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<!-- Materialize JS -->
+		<script type="text/javascript" src="js/materialize.js"></script>
+
+		<script>
+		$(document).ready(function(){
+
+			$('.carousel').carousel({
+				fullWidth:false
+			});
+		
+
+		$('.next').click(function(){
+			$('.carousel').carousel('next');
+		});
+		});
+
+		</script>
+
+	</body>
+</html>
